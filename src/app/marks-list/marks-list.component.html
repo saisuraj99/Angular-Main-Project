@@ -1,0 +1,36 @@
+<div class="panel panel-secondary">
+    <div class="panel-heading">
+        <h2>Marks List</h2>
+    </div>
+
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Stuent-Id</th>
+                    <th>Exam-Id</th>
+                    <th>Student-Name</th>
+                    <th>Exam-Name</th>
+                    <th>Sub1</th>
+                    <th>Sub2</th>
+                    <th>Sub3</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let mark of marks | async">
+                    <td>{{ mark.studid }}</td>
+                    <td>{{ mark.examid }}</td>
+                    <td>{{ mark.stud_name }}</td>
+                    <td>{{ mark.exam_name }}</td>
+                    <td>{{ mark.sub1 }}</td>
+                    <td>{{ mark.sub2 }}</td>
+                    <td>{{ mark.sub3 }}</td>
+                    <td>
+                        <button (click) = "updateMarks(mark.studid)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

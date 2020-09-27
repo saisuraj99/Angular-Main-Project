@@ -1,0 +1,46 @@
+<h3>Update Marks Details</h3>
+
+<div style="width: 400px;">
+    <form (ngSubmit) = "onSubmit()">
+        <div class = "form-group">
+            <label for="studid">Student-Id</label>
+            <input type="text" class ="form-control" id="studid" required [(ngModel)]="mark.studid" name="studid" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="examid">Exam-Id</label>
+            <input type="text" class ="form-control" id="examid" required [(ngModel)]="mark.examid" name="examid">
+        </div>
+
+        <div class="form-group">
+            <label for="stud_name">Student-Name</label>
+            <input type="text" class ="form-control" id="stud_name" required [(ngModel)]="mark.stud_name" name="stud_name">
+        </div>
+
+        <div class="form-group">
+            <label for="exam_name">Exam-Name</label>
+            <input type="text" class ="form-control" id="exam_name" required [(ngModel)]="mark.exam_name" name="exam_name">
+        </div>
+
+        <div class="form-group">
+            <label for="sub1">Sub1</label>
+            <input type="text" class ="form-control" id="sub1" required [(ngModel)]="mark.sub1" name="sub1">
+        </div>
+
+        <div class="form-group">
+            <label for="sub2">Sub2</label>
+            <input type="text" class ="form-control" id="sub2" required [(ngModel)]="mark.sub2" name="sub2">
+        </div>
+
+        <div class="form-group">
+            <label for="sub3">Sub3</label>
+            <input type="text" class ="form-control" id="sub3" required [(ngModel)]="mark.sub3" name="sub3">
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+
+    <div [hidden]="!submitted">
+        <h4>Updated Successfully</h4>
+    </div>
+</div>

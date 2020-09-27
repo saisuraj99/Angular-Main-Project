@@ -1,0 +1,28 @@
+<h2>Student Details</h2>
+
+<hr/>
+<div *ngIf="student">
+    <div>
+        <label><b>Id: </b></label> {{ student.id }}
+    </div>
+
+    <div>
+        <label><b>Name: </b></label> {{ student.name }}
+    </div>
+
+    <div>
+        <label><b>Dob: </b></label> {{ student.dob }}
+    </div>
+    
+    <div>
+        <label><b>Email: </b></label> {{ student.email }}
+    </div>
+
+    <div>
+        <label><b>Mobile: </b></label> {{ student.mobile }}
+    </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Studdent List</button>

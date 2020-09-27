@@ -1,0 +1,20 @@
+<p>add-exam works!</p>
+<div style="width: 400px;">
+    <form (ngSubmit) = "onSubmit()">
+        <div class = "form-group">
+            <label for="id">ExamId</label>
+            <input type="text" class ="form-control" id="id" required [(ngModel)]="exam.id" name="id">
+        </div>
+
+        <div class="form-group">
+            <label for="name">ExamName</label>
+            <input type="text" class ="form-control" id="name" required [(ngModel)]="exam.name" name="name">
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+
+    <div [hidden]="!submitted">
+        <h4>Submitted Successfully</h4>
+    </div>
+</div>

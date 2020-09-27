@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+          <a routerLink="home" class="nav-link" routerLinkActive="active">Home Page</a>
+      </li> 
+      <li class="nav-item">
+        <a routerLink="students" class="nav-link" routerLinkActive="active">Student List</a>
+      </li>
+  
+      <li class="nav-item">
+        <a routerLink="add" class="nav-link" routerLinkActive="active">Add Student</a>
+      </li>
+  
+      <li class="nav-item">
+        <a routerLink="exams" class="nav-link" routerLinkActive="active">Exam List</a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="marks" class="nav-link" routerLinkActive="active">Marks List</a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="addmarks" class="nav-link" routerLinkActive="active">Add Marks</a> 
+      </li>
+    </ul>
+</nav>
+  
+<div class="container">
+    <br>
+    <hr>
+    <div class="card">
+      <div class="card-body">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+</div>
