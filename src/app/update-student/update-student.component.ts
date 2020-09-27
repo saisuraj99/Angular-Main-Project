@@ -21,7 +21,7 @@ export class UpdateStudentComponent implements OnInit {
     this.studentService.getStudent(this.id)
      .subscribe(data => {
        console.log(data);
-       this.student=data;
+       this.student = data;
      }, error => console.log(error));
   }
   updateStudent(){
