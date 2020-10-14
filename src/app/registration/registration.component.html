@@ -1,0 +1,40 @@
+<div style="min-width:100px;min-height:600px;background-image: url('https://i.pinimg.com/originals/45/ee/fe/45eefecc477df47593b361a04b2d4cfa.jpg');">
+    <br>
+    <div class="container" style="max-width: 600px;background-color: burlywood;">
+        <h2 class="textual">USER REGISTRATION</h2>
+        <form #Registrationform="ngForm" (ngSubmit)="registerUser()">
+            <!-- <small [class.text-danger]="msg.status==500" >{{msg.message}}</small> -->
+          
+  
+            <div class="form-group">
+                <label for="userName">User Name:</label>
+                <input type="text" class="form-control" placeholder="Enter userName" name="userName" [(ngModel)]="user.userName" #userName="ngModel" required
+                [class.is-invalid]="userName.invalid && userName.touched">  
+                <small class="text-danger" [class.d-none]="userName.valid || userName.untouched">User Name is required field</small>
+        
+              </div>
+  
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="text" class="form-control" placeholder="Enter password" name="password" [(ngModel)]="user.password" #password="ngModel" required
+                [class.is-invalid]="password.invalid && password.touched">  
+                <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
+            </div>
+  
+            <div class="form-group">
+                <label for="pwd">Confirm Password:</label>
+                <input type="text" class="form-control" placeholder="Enter confirm password" name="cpassword"  #cpassword="ngModel" (ngModel)="user.password" required
+                [class.is-invalid]="cpassword.invalid && cpassword.touched">  
+                <small class="text-danger" [class.d-none]="(cpassword.value == cpassword.value) || cpassword.untouched">Password & ConfirmPassword must be the same</small>
+            </div>
+  
+            <button [disabled]="Registrationform.form.invalid" type="submit" class="btn btn-info">Register</button>
+  
+            <button class="float-center btextual" type="reset" class="btn btn-primary">Reset</button>
+            
+            <small class ="float-right" [routerLink]="['/login']">Already Registered? login here</small>
+        </form>
+        <br>
+    </div>
+    <br><br><br>
+  </div>
